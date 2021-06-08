@@ -9,7 +9,7 @@
             private static $instance;      // instancia de la conexion // la |instance| es un objeto que llama otro
 
         public function __construct() {
-            $this->$db = new PDO(self::$dns, self::$user, self::$pass);         // |self| hace referencia a la instancia // Conecta Automaticamente Con PDO
+            $this->db = new PDO(self::$dns, self::$user, self::$pass);         // |self| hace referencia a la instancia // Conecta Automaticamente Con PDO
         }
 
         public static function getInstance() {
@@ -25,8 +25,8 @@
 
 
             try {
-                $conexion = Database::getInstance() //obtiene la instancia de la clase
-                $query = $conexion->$db->prepare("INSERT INTO persona (nombre, apellido, email, edad) VALUES (:nombre, :apellido, :email, :edad,)");
+                $conexion = Database::getInstance(); //obtiene la instancia de la clase
+                $query = $conexion->db->prepare("INSERT INTO persona (nombre, apellido, email, edad) VALUES (:nombre, :apellido, :email, :edad)");
                 $query->execute(
                     array(
                         ':nombre'   => $nombre,
