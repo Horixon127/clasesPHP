@@ -16,10 +16,22 @@
         </div>
         <div class="card-body">
             <?php
-        
+                if (isset($_GET['confirm'])) {
+
+                    if ($_GET['confirm'] === "0") {
+                        echo '<div class="alert alert-danger" role="alert"> <h4>Dato no ingresado<h4> </div>';
+                    }
+                    if ($_GET['confirm'] === "1") {
+                        echo '<div class="alert alert-success" role="alert"> <h4>Dato ingresado correctamente<h4> </div>';
+                    }
+                    if ($_GET['confirm'] === "2") {
+                        echo '<div class="alert alert-warning" role="alert"> <h4>Uno o mas campos estan vacios<h4> </div>';
+                    }
+                    //if ($_GET['confirm'] === "3")
+                }
         
             ?>
-            <form action="" method="POST">
+            <form action="./config/insertar.php" method="POST">
                 <div class="form-group">
                     <input type="text"   class="form-control" id="nombre"   name="nombre"   placeholder="Nombre">
                 </div>
@@ -32,7 +44,7 @@
                 <div class="form-group">
                     <input type="number" class="form-control" id="edad"     name="edad"     placeholder="Edad">
                 </div>
-                <button class="btn btn-primary">Añadir Registro</button>
+                <button type="submit" class="btn btn-primary">Añadir Registro</button>
             </form> 
          </div>
       </div>
