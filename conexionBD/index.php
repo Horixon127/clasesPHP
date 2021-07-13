@@ -7,7 +7,6 @@
     <title>Insercion en BD</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
 </head>
-<body>
 <body class="bg-dark">
     <div class="d-flex justify-content-center my-5">
       <div class="card col-md-7"> 
@@ -44,7 +43,7 @@
                 <div class="form-group">
                     <input type="number" class="form-control" id="edad"     name="edad"     placeholder="Edad">
                 </div>
-                <button type="submit" class="btn btn-primary">Añadir Registro</button>
+                <button class="btn btn-primary">Añadir Registro</button>
             </form> 
          </div>
       </div>

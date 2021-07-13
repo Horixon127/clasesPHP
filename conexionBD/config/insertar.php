@@ -11,7 +11,7 @@
             $email = $_POST['email'];
 
             $conexion = new Database;
-            $confirm = $conexion->insertar($nombre, $apellido, $edad, $email);
+            $confirm = $conexion->insertar($nombre, $apellido $edad $email);
 
         } else {
 
